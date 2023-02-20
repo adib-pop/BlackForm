@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins ,sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #23242a;
+    min-height: 100vh;
+}
+.container{
+   position: relative;
+   width: 390px;
+   height: 400px;
+   background-color: black;
+   border-radius: 20px;
+}
+.formcontent{
+   position: absolute;
+   inset: 2px;
+   background-color: #1a1b22;
+   z-index: 100;
+   border-radius: 20px;
+   display: flex;
+   padding: 20px 30px;
+   flex-direction: column;
+}
+.formcontent h2{
+    color: aqua;
+    font-weight:500 ;
+    text-align: center;    
+    letter-spacing: 3px;
+    padding-bottom: 20px;
+}
+.boxinput{
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+.boxinput input{
+    position: relative;
+    width: 100%;
+    padding: 10px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color:#23242a ;
+    font-size: 1em;
+    z-index: 100;
+}
+.boxinput span{
+    position: absolute;
+    left: 0;
+    text-transform: uppercase;
+    color: #8f8f8f;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.boxinput input:valid ~ span,
+.boxinput input:focus ~ span {
+    color: aqua;
+    transform: translateY(-32px);
+    font-size: 0.75em;
+}
+.boxinput i{
+    position:absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    border-radius:3px ;
+    background: aqua;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.boxinput input:valid ~ i,
+.boxinput input:focus ~ i {
+    height: 44px;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+.links a{
+    margin: 20px 0;
+    text-decoration: none;
+    color: #8f8f8f;
+    font-size: 0.75em;
+}
+.links a:hover,
+.links a:nth-child(2){
+    color: aqua;
+    transition: 0.5s;
+}
+input[type="submit"]{
+    border: none;
+    outline: none;
+    background: aqua;
+    padding: 17px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 600;
+}
+input[type="submit"]:active{
+    opacity: 0.8;
+}
